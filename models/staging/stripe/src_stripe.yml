@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: fifth-battery-131115
+    schema: stripe
+    tables:
+      - name: customers
+      - name: subscriptions
+      - name: subscription_items
