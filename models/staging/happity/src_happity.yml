@@ -1,24 +1,23 @@
 version: 2
 
 sources:
-  - name: stripe
+  - name: happity
     database: fifth-battery-131115
-    schema: stripe
+    schema: happity_prod_db
     tables:
-      - name: customers
+      - name: tickets
         loaded_at_field: _airbyte_emitted_at
         freshness:
           error_after: {count: 24, period: hour}
-      - name: subscriptions
+      - name: users_scd
         loaded_at_field: _airbyte_emitted_at
         freshness:
           error_after: {count: 24, period: hour}
-      - name: subscription_items
+      - name: events_scd
         loaded_at_field: _airbyte_emitted_at
         freshness:
           error_after: {count: 24, period: hour}
-      - name: subscriptions_plan
+      - name: providers_scd
         loaded_at_field: _airbyte_emitted_at
         freshness:
           error_after: {count: 24, period: hour}
-      
