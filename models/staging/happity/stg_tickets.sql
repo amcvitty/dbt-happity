@@ -1,10 +1,11 @@
-with customers as (
-    select 
-        id as stripe_customer_id,
-        email, 
-        balance as balance_pence
-         
-    from {{ source('stripe', 'customers') }}
-)
 
-select * from customers
+select 
+    id as ticket_id,
+    booking_id, 
+    event_id, 
+    price_id, 
+    cost_pence, 
+    revenue_pence,
+    type as ticket_type, 
+    created_at   
+from {{ source('happity', 'tickets') }}
