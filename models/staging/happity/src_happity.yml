@@ -9,7 +9,19 @@ sources:
         loaded_at_field: _airbyte_emitted_at
         freshness:
           error_after: {count: 24, period: hour}
+      - name: bookings
+        loaded_at_field: _airbyte_emitted_at
+        freshness:
+          error_after: {count: 24, period: hour}
       - name: users_scd
+        loaded_at_field: _airbyte_emitted_at
+        freshness:
+          error_after: {count: 24, period: hour}
+      - name: consumer_leads
+        loaded_at_field: _airbyte_emitted_at
+        freshness:
+          error_after: {count: 24, period: hour}
+      - name: events
         loaded_at_field: _airbyte_emitted_at
         freshness:
           error_after: {count: 24, period: hour}
