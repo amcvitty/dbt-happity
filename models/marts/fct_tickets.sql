@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+
 
 with bookings as (
     select * from {{ ref('stg_bookings') }}
