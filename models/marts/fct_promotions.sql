@@ -1,4 +1,3 @@
-{{ config(materialized='table') }}
 
 with promotions as (
         select * from {{ ref('stg_promotions') }}
