@@ -2,8 +2,6 @@ select
     case when providers.provider_full_name is null then 'NO PROVIDER: ' || stripe_customer_id else providers.provider_full_name  end as provider_full_name , 
     stripe_customer_id,
     stripe_subscription_id,
-    --subscriptions.*,
-    --plans.*,
     plans.amount,
     plans.interval, 
     products.name as product_name,
