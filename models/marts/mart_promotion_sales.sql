@@ -15,6 +15,7 @@ select
     promotion_dates.date_month_short_name as promotion_date_month_short_name ,
     promotion_dates.date_year as promotion_date_year ,
     promotion_dates.date_year_month as promotion_date_year_month ,
+    promotion_dates.date_year_week as promotion_date_year_week ,
     promotion_dates.date_is_weekend as promotion_date_is_weekend,
 
 from {{ ref('fct_promotions') }} fct_promotions
