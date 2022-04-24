@@ -15,6 +15,7 @@ select
     event_dates.date_month_short_name as event_date_month_short_name ,
     event_dates.date_year as event_date_year ,
     event_dates.date_year_month as event_date_year_month ,
+    event_dates.date_year_week as event_date_year_week ,
     event_dates.date_is_weekend as event_date_is_weekend,
 
     booking_dates.date_weekday_number as booking_date_weekday_number,  
@@ -26,6 +27,7 @@ select
     booking_dates.date_month_short_name as booking_date_month_short_name ,
     booking_dates.date_year as booking_date_year ,
     booking_dates.date_year_month as booking_date_year_month ,
+    booking_dates.date_year_week as booking_date_year_week ,
     booking_dates.date_is_weekend as booking_date_is_weekend
 
 
