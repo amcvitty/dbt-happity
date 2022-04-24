@@ -33,8 +33,8 @@ fct_tickets as (
         
         -- Financials here. Note we're avoiding divide by zero errors for free bookings
         tickets.revenue_pence /100 as ticket_consumer_price_pounds,
-        case when bookings.cost_pence = 0 then 0 else bookings.calculated_commission_pence * tickets.revenue_pence / bookings.cost_pence end /100 as calculated_commission_pounds,
-        case when bookings.cost_pence = 0 then 0 else bookings.charged_commission_pence    * tickets.revenue_pence / bookings.cost_pence end /100 as charged_commission_pounds,
+        case when bookings.cost_pence = 0 then 0 else bookings.commission_calculated_pence * tickets.revenue_pence / bookings.cost_pence end /100 as commission_calculated_pounds,
+        case when bookings.cost_pence = 0 then 0 else bookings.commission_charged_pence    * tickets.revenue_pence / bookings.cost_pence end /100 as commission_charged_pounds,
         case when bookings.cost_pence = 0 then 0 else bookings.commission_discount_pence   * tickets.revenue_pence / bookings.cost_pence end /100 as commission_discount_pounds,
         case when bookings.cost_pence = 0 then 0 else bookings.stripe_fee_pence            * tickets.revenue_pence / bookings.cost_pence end /100 as stripe_fee_pounds
     from tickets
